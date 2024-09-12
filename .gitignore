@@ -5,3 +5,4 @@
 /node_modules
 .eslintrc
 .vscode/settings.json
+/allure-report

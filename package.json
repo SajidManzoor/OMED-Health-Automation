@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.25.4",
     "@babel/register": "^7.24.6",
     "@eslint/js": "^9.9.1",
-    "@wdio/allure-reporter": "^9.0.4",
+    "@wdio/allure-reporter": "^9.0.8",
     "@wdio/appium-service": "^9.0.5",
     "@wdio/browserstack-service": "^9.0.7",
     "@wdio/cli": "^9.0.7",

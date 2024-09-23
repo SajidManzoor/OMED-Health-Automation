@@ -13,10 +13,13 @@ config.specs= ["./test/specs/android/*.js"]
 // ============
 // Capabilities
 // ============
-config.capabilities= [{
-  'bstack:options': {
+config.capabilities= [
+  {
+
+    'bstack:options': {
     deviceName: 'Samsung Galaxy S23 Ultra',
-    osVersion: "13.0"
+    osVersion: "13.0",
+    autoGrantPermissions: true
   }
 }],
 

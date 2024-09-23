@@ -6,3 +6,4 @@
 .eslintrc
 .vscode/settings.json
 /allure-report
+*.log

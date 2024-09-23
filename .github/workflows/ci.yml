@@ -1,0 +1,26 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.9.0
+      - name: Install
+        run: npm install
+      - name: Test
+        env:
+          BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER}}
+          BROWSERSTACK_KEY: ${{secrets.BROWSERSTACK_KEY}}
+          EMAIL: ${{secrets.EMAIL}}
+          PASSWORD: ${{secrets.PASSWORD}}
+          COUNTRY: ${{secrets.COUNTRY}}
+        run: npx wdio ./wdio.bs.conf.js --spec ./test/specs/android/*.js
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: logs
+          path: logs

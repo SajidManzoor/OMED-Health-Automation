@@ -12,25 +12,28 @@ describe("Smoke Test", () => {
       process.env.PASSWORD,
       process.env.COUNTRY
     );
-    await Utils.skipTour();
-    await Utils.addDataBtn.click();
-    await Utils.skipTour();
-    await LogScreen.addFoodAndDrinks("Pizza", "Coke");
-    await LogScreen.symptomsBtn.click();
-    await Utils.skipTour();
-    await Symptoms.setBloating(50);
-    await Symptoms.setAbdominalPain(30);
-    await Symptoms.setNausea(40);
-    await Symptoms.setFlautulence(60);
-    await Symptoms.setStool(50);
-    await Utils.backBtn.click();
-    await Symptoms.verifySuccessMsg();
-    await LogScreen.lifestyleBtn.click();
-    await Utils.skipTour();
-    await Lifestyle.setStress(70);
-    await Lifestyle.setSleep(50);
-    await Lifestyle.setExercise(90);
-    await Utils.accountBtn.click();
-    await Account.updateName("Sajid", "QA");
+
+    it("Other", async () => {
+      await Utils.skipTour();
+      await Utils.addDataBtn.click();
+      await Utils.skipTour();
+      await LogScreen.addFoodAndDrinks("Pizza", "Coke");
+      await LogScreen.symptomsBtn.click();
+      await Utils.skipTour();
+      await Symptoms.setBloating(50);
+      await Symptoms.setAbdominalPain(30);
+      await Symptoms.setNausea(40);
+      await Symptoms.setFlautulence(60);
+      await Symptoms.setStool(50);
+      await Utils.backBtn.click();
+      await Symptoms.verifySuccessMsg();
+      await LogScreen.lifestyleBtn.click();
+      await Utils.skipTour();
+      await Lifestyle.setStress(70);
+      await Lifestyle.setSleep(50);
+      await Lifestyle.setExercise(90);
+      await Utils.accountBtn.click();
+      await Account.updateName("Sajid", "QA");
+    });
   });
 });

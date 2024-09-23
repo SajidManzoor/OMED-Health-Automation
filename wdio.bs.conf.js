@@ -15,12 +15,11 @@ config.specs= ["./test/specs/android/*.js"]
 // ============
 config.capabilities= [
   {
-
     'bstack:options': {
     deviceName: 'Samsung Galaxy S23 Ultra',
     osVersion: "13.0",
-    autoGrantPermissions: true
-  }
+  },
+  "appium:autoGrantPermissions": true,
 }],
 
 config.services = [

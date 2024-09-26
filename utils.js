@@ -10,7 +10,7 @@ class Utilities {
     );
   }
   get skipBtn() {
-    return driver.$("~Skip tour");
+    return driver.$('android=new UiSelector().text("Skip tour")')
   }
   get backBtn() {
     return driver.$('//*[@resource-id="backButton"]');
@@ -35,8 +35,8 @@ class Utilities {
         actions: [
           { type: "pointerMove", duration: 0, x: startX, y: yAxis },
           { type: "pointerDown", button: 0 },
-          { type: "pause", duration: 100 },
-          { type: "pointerMove", duration: 500, x: moveToX, y: yAxis },
+          { type: "pause", duration: 0 },
+          { type: "pointerMove", duration: 50, x: moveToX, y: yAxis },
           { type: "pointerUp", button: 0 },
         ],
       },

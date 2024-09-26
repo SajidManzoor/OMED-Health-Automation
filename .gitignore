@@ -7,3 +7,4 @@
 .vscode/settings.json
 /allure-report
 *.log
+local.log

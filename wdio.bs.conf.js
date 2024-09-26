@@ -10,6 +10,11 @@ config.key = process.env.BROWSERSTACK_KEY;
 // Specify Test Files
 // ==================
 config.specs= ["./test/specs/android/*.js"]
+config.mochaOpts= {
+  ui: "bdd",
+  timeout: 60000,
+  bail: true,
+}
 // ============
 // Capabilities
 // ============
@@ -36,7 +41,6 @@ config.services = [
       app:"bs://acee5d9c3d0b7d2640df47c2a56746e3b0c5f9be"
     },
   ],
-
 ];
 
 exports.config = config;

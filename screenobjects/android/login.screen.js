@@ -12,7 +12,9 @@ class Login {
     return driver.$('//*[@resource-id="Login-LoginButton"]');
   }
   get finishBtn() {
-    return driver.$("~Finish");
+    return driver.$(
+      'android=new UiSelector().resourceId("DataSync-FinishButton")'
+    );
   }
   /**
    * method to login to the app

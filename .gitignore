@@ -8,3 +8,4 @@
 /allure-report
 *.log
 local.log
+screenshots/failed.png

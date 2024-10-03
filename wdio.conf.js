@@ -1,4 +1,5 @@
 const path = require("path");
+const os = require("os");
 
 exports.config = {
   //
@@ -138,6 +139,10 @@ exports.config = {
         outputDir: "allure-results",
         disableWebdriverStepsReporting: false,
         disableWebdriverScreenshotsReporting: false,
+        reportedEnvironmentVars: {
+          os_version: os.version(),
+          node_version: process.version,
+        },
       },
     ],
   ],
@@ -246,6 +251,19 @@ exports.config = {
    */
   // afterTest: function(test, context, { error, result, duration, passed, retries }) {
   // },
+  afterTest: async (
+    test,
+    context,
+    { error, result, duration, passed, retries }
+  ) => {
+    if (!passed) {
+      // Capture screenshot for a failed test in a mobile app
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+      const screenshotName = "./screenshots/failed.png";
+      await browser.saveScreenshot(screenshotName);
+      console.log("Screenshot saved for failed test: ${screenshotName}");
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended

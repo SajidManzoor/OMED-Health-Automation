@@ -6,7 +6,7 @@ class Profile {
     return driver.$('//*[@resource-id="lastName"]');
   }
   get saveButton() {
-    return driver.$('//*[@resource-id="saveButton"]');
+    return driver.$('//*[@resource-id="savesButton"]');
   }
   get successMsg() {
     return driver.$('//*[@text="The form was saved successfully"]');

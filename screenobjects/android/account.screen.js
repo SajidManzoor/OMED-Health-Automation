@@ -3,6 +3,11 @@ class Account {
   get myProfileButton() {
     return driver.$('//*[@resource-id="myProfileButton"]');
   }
+  /**
+   *
+   * @param {string} firstName
+   * @param {string} lastName
+   */
   async updateName(firstName, lastName) {
     await this.myProfileButton.click();
     await Profile.firstName.setValue(firstName);

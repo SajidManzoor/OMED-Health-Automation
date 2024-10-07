@@ -1,7 +1,5 @@
 const LoginScreen = require("../../../screenobjects/android/login.screen");
 const LogScreen = require("../../../screenobjects/android/log.screen");
-const Symptoms = require("../../../screenobjects/android/symptoms.screen");
-const Lifestyle = require("../../../screenobjects/android/lifestyle.screen");
 const Account = require("../../../screenobjects/android/account.screen");
 const Utils = require("../../../utils");
 
@@ -20,22 +18,10 @@ describe("Smoke Tests", () => {
     await LogScreen.addFoodAndDrinks("Pizza", "Coke");
   });
   it("Add Symptoms", async () => {
-    await LogScreen.symptomsBtn.click();
-    await Utils.skipTour();
-    await Symptoms.setBloating(50);
-    await Symptoms.setAbdominalPain(30);
-    await Symptoms.setNausea(40);
-    await Symptoms.setFlautulence(60);
-    await Symptoms.setStool(50);
-    await Utils.backBtn.click();
-    await Symptoms.verifySuccessMsg();
+    await LogScreen.addSymptoms(50, 30, 40, 60, 50);
   });
   it("Add Lifestyle", async () => {
-    await LogScreen.lifestyleBtn.click();
-    await Utils.skipTour();
-    await Lifestyle.setStress(70);
-    await Lifestyle.setSleep(50);
-    await Lifestyle.setExercise(90);
+    await LogScreen.addLifestyle(70, 50, 90);
   });
   it("Update Name", async () => {
     await Utils.accountBtn.click();

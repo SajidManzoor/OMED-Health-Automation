@@ -1,5 +1,5 @@
 const path = require("path");
-const  config  = require("./wdio.conf");
+const config = require("./wdio.conf");
 
 // ==================
 // BrowserStack Credentials
@@ -9,23 +9,24 @@ config.key = process.env.BROWSERSTACK_KEY;
 // ==================
 // Specify Test Files
 // ==================
-config.specs= ["./test/specs/android/*.js"]
-config.mochaOpts= {
+config.specs = ["./test/specs/android/*.js"];
+config.mochaOpts = {
   ui: "bdd",
   timeout: 60000,
   bail: true,
-}
+};
 // ============
 // Capabilities
 // ============
-config.capabilities= [
+config.capabilities = [
   {
-    'bstack:options': {
-    deviceName: 'Samsung Galaxy S23 Ultra',
-    osVersion: "13.0",
+    "bstack:options": {
+      deviceName: "Samsung Galaxy S23 Ultra",
+      osVersion: "13.0",
+    },
+    "appium:autoGrantPermissions": true,
   },
-  "appium:autoGrantPermissions": true,
-}],
+];
 
 config.services = [
   [
@@ -34,11 +35,10 @@ config.services = [
       testObservability: true,
       testObservabilityOptions: {
         projectName: "OMED Health Automation",
-        buildName:
-          "Smoke Tests",
+        buildName: "Smoke Tests",
       },
       browserstackLocal: true,
-      app:"bs://acee5d9c3d0b7d2640df47c2a56746e3b0c5f9be"
+      app: "bs://d9c87d48960149bdeee0f771db35be1aa3adfcf2",
     },
   ],
 ];

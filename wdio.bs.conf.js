@@ -38,7 +38,7 @@ config.services = [
         buildName: "Smoke Tests",
       },
       browserstackLocal: true,
-      app: "bs://d9c87d48960149bdeee0f771db35be1aa3adfcf2",
+      app: "bs://d3daf5989b2508111869043dbd8aa527d3ae7765",
     },
   ],
 ];

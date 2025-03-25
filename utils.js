@@ -10,7 +10,7 @@ class Utilities {
     );
   }
   get skipBtn() {
-    return driver.$('android=new UiSelector().text("Skip tour")')
+    return driver.$('android=new UiSelector().text("Skip tour")');
   }
   get backBtn() {
     return driver.$('//*[@resource-id="backButton"]');

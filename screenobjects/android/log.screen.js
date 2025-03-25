@@ -14,7 +14,7 @@ class Log {
   }
   /**
    * method to add food and drinks
-   * @param {string} food 
+   * @param {string} food
    * @param {string} drink
    */
   async addFoodAndDrinks(food, drink) {

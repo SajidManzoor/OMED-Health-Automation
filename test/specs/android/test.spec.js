@@ -15,16 +15,16 @@ describe("Smoke Tests", () => {
     await Utils.skipTour();
     await Utils.addDataBtn.click();
     await Utils.skipTour();
-    await LogScreen.addFoodAndDrinks("Pizza", "Coke");
+    await LogScreen.addFoodAndDrinks(process.env.FOOD,process.env.DRINK);
   });
   it("Add Symptoms", async () => {
-    await LogScreen.addSymptoms(50, 30, 40, 60, 50);
+    await LogScreen.addSymptoms(process.env.BLOATING, process.env.ABDOMINAL_PAIN, process.env.NAUSEA, process.env.FLATULENCE, process.env.STOOL);
   });
   it("Add Lifestyle", async () => {
-    await LogScreen.addLifestyle(70, 50, 90);
+    await LogScreen.addLifestyle(process.env.STRESS, process.env.SLEEP, process.env.EXERCISE);
   });
   it("Update Name", async () => {
     await Utils.accountBtn.click();
-    await Account.updateName("Sajid", "QA");
+    await Account.updateName(process.env.FIRST_NAME, process.env.LAST_NAME);
   });
 });

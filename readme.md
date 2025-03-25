@@ -1,9 +1,11 @@
 # Mobile Application Automation using Appium with WebdriverIO
 
 ## Overview
+
 This project focuses on automating mobile applications using the Appium framework with WebdriverIO. The automation is written in JavaScript and utilizes several key tools and methodologies to ensure effective testing.
 
 ### Tools & Technologies
+
 - **IDE**: Microsoft Visual Studio Code
 - **Programming Language**: JavaScript
 - **Testing Framework**: WebdriverIO with Appium
@@ -14,6 +16,7 @@ This project focuses on automating mobile applications using the Appium framewor
 - **Continuous Integration**: CI pipeline set up using GitHub Actions
 
 ### Features
+
 - Supports both **iOS** and **Android** platforms.
 - Detailed logs and screenshots of failed tests for easy debugging.
 - Integration with GitHub Actions to trigger tests automatically on code push.

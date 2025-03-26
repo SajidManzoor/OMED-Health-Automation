@@ -1,4 +1,4 @@
-const Utils = require("../../utils");
+const Utils = require("../../utils/utils");
 const Food = require("./food.screen");
 const Symptoms = require("./symptoms.screen");
 const Lifestyle = require("./lifestyle.screen");

@@ -4,7 +4,6 @@ class Account {
     return driver.$('//*[@resource-id="myProfileButton"]');
   }
   /**
-   *
    * @param {string} firstName
    * @param {string} lastName
    */
@@ -12,7 +11,7 @@ class Account {
     await this.myProfileButton.click();
     await Profile.firstName.setValue(firstName);
     await Profile.lastName.setValue(lastName);
-    await Profile.saveButton.click(setTimeout(5000));
+    await Profile.saveButton.click();
     await Profile.verifySuccessMsg();
   }
 }

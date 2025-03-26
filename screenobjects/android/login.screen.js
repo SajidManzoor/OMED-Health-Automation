@@ -1,3 +1,5 @@
+const WaitUtil = require("../../utils/wait.util");
+
 class Login {
   get emailInput() {
     return driver.$('//*[@resource-id="Login-EmailInput"]');
@@ -28,7 +30,7 @@ class Login {
     await this.selectCountryDropdown.click();
     await driver.$("~" + String(country)).click();
     await this.loginBtn.click();
-    await driver.pause(10000);
+    await WaitUtil.waitForElementToBeDisplayed(this.finishBtn);
     await this.finishBtn.click();
   }
 }

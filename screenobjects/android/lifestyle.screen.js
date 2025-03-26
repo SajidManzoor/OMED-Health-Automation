@@ -1,4 +1,4 @@
-const Utils = require("../../utils");
+const Utils = require("../../utils/utils");
 class Lifestyle {
   get stress() {
     return driver.$(
@@ -19,19 +19,19 @@ class Lifestyle {
     return driver.$('//*[@text="Symptoms entry saved successfully"]');
   }
   /**
-   * @param {number} percentage 
+   * @param {number} percentage
    */
   async setStress(percentage) {
     await Utils.moveSlider(this.stress, percentage);
   }
   /**
-   * @param {number} percentage 
+   * @param {number} percentage
    */
   async setSleep(percentage) {
     await Utils.moveSlider(this.sleep, percentage);
   }
   /**
-   * @param {number} percentage 
+   * @param {number} percentage
    */
   async setExercise(percentage) {
     await Utils.moveSlider(this.exercise, percentage);

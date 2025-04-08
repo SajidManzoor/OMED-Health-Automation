@@ -12,7 +12,7 @@ config.key = process.env.BROWSERSTACK_KEY;
 config.specs = ["./test/specs/android/*.js"];
 config.mochaOpts = {
   ui: "bdd",
-  timeout: 60000,
+  timeout: process.env.MOCHA_TIMEOUT,
   bail: true,
 };
 // ============
@@ -38,7 +38,7 @@ config.services = [
         buildName: "Smoke Tests",
       },
       browserstackLocal: true,
-      app: "bs://d3daf5989b2508111869043dbd8aa527d3ae7765",
+      app: process.env.BROWSERSTACK_APP,
     },
   ],
 ];

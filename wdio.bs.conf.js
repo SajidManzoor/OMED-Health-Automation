@@ -21,8 +21,8 @@ config.mochaOpts = {
 config.capabilities = [
   {
     "bstack:options": {
-      deviceName: "Samsung Galaxy S23 Ultra",
-      osVersion: "13.0",
+      deviceName: "Google Pixel 9 Pro XL",
+      osVersion: "15.0",
     },
     "appium:autoGrantPermissions": true,
   },
